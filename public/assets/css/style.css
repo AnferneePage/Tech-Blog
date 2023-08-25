@@ -1,0 +1,262 @@
+:root {
+  --primary-color: #588970;
+  --dense-pri-color: #5889706d;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Basic CSS Reset */
+
+/* Reset box-sizing and margin/padding to ensure consistency */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles (bullets/numbers) */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default anchor styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove default button styles */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+/* Remove input and textarea border */
+input,
+textarea {
+  border: none;
+  outline: none;
+}
+
+/* Remove form elements' default styling */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea,
+select {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* Reset heading margins */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* Apply a base font size and line height for consistency */
+body {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Apply a reasonable margin to the body */
+body {
+  margin: 0;
+  height: fit-content;
+  background-color: #dddddd37;
+}
+
+.header {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
+#sign-upBTN {
+  background-color: var(--primary-color);
+}
+
+.blog {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  height: fit-content;
+  border-bottom: 0.1px solid rgba(0, 0, 0, 0.127);
+  border: 0.3px solid black;
+}
+
+.header-container {
+  padding: 0.5rem;
+  width: 100%;
+  background-color: var(--dense-pri-color);
+}
+
+.blog-title {
+  font-weight: 900;
+  font-size: 1rem;
+  color: white;
+}
+
+.blog-info-container {
+  width: 100%;
+  height: 4vh;
+  padding-right: 0.5rem;
+}
+
+/* Style for the entire entry */
+.entry {
+  display: flex; /* Display the person and date side by side */
+  align-items: center; /* Vertically align the content */
+  margin-bottom: 10px; /* Add some space between entries */
+  font-weight: 500;
+  float: right;
+}
+
+/* Style for the person */
+.person {
+  font-weight: bold;
+  margin-right: 10px; /* Add space between person and date */
+}
+
+.blog-p-container {
+  padding: 1rem;
+}
+
+form {
+  margin-top: 7rem;
+  margin-bottom: 5rem;
+}
+
+.auth-container {
+  padding: 3rem;
+  display: block;
+  margin-left: auto;
+  margin: auto;
+  width: 80%;
+  height: 45vh;
+  background-color: white;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.auth-header {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+}
+
+#auth-submit-button {
+  margin-top: 3rem;
+  float: right;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.new-postBTN {
+  display: block;
+  bottom: 20px;
+  left: 50%;
+  z-index: 999;
+  width: 9rem;
+  height: 7rem;
+  background-color: white;
+  color: var(--primary-color);
+}
+
+.LG-SC-create-new-postBTN {
+  display: none;
+}
+
+.new-post-container {
+  margin-top: 4rem;
+  display: block;
+  width: 90%;
+  height: 55vh;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border-bottom: 0.1px solid rgba(0, 0, 0, 0.127);
+}
+
+.np-header-container {
+  width: 100%;
+  background-color: var(--dense-pri-color);
+  height: 5vh;
+  padding: 0.5rem;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.np-info-container {
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+}
+
+.LG-SC-create-new-postBTN {
+  display: block;
+  display: flex;
+  width: 10rem;
+  height: 3rem;
+  background-color: var(--primary-color);
+  color: white;
+  float: right;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 0.6rem;
+  margin-right: 2rem;
+}
+
+@media only screen and (min-width: 769px) {
+  .blog {
+    width: 70%;
+    margin-top: 2rem;
+    border-radius: 1rem;
+  }
+
+  .header-container {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+  .blog-info-container {
+    border-top: 0.1px solid rgba(0, 0, 0, 0.558);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  .auth-container {
+    width: 40rem;
+  }
+
+  .new-post-container {
+    width: 50rem;
+  }
+}
