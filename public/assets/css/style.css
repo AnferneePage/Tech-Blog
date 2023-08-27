@@ -75,6 +75,7 @@ h6 {
 body {
   font-size: 16px;
   line-height: 1.5;
+  height: 100vh;
 }
 
 /* Apply a reasonable margin to the body */
@@ -144,8 +145,7 @@ body {
 }
 
 form {
-  margin-top: 7rem;
-  margin-bottom: 5rem;
+  margin-top: 4rem;
 }
 
 .auth-container {
@@ -185,15 +185,11 @@ form {
   color: var(--primary-color);
 }
 
-.LG-SC-create-new-postBTN {
-  display: none;
-}
-
 .new-post-container {
   margin-top: 4rem;
   display: block;
   width: 90%;
-  height: 55vh;
+  height: 70vh;
   margin-left: auto;
   margin-right: auto;
   background-color: white;
@@ -203,7 +199,7 @@ form {
 .np-header-container {
   width: 100%;
   background-color: var(--dense-pri-color);
-  height: 5vh;
+  height: 13%;
   padding: 0.5rem;
   font-weight: 900;
   font-size: 1.5rem;
@@ -219,8 +215,8 @@ form {
 .LG-SC-create-new-postBTN {
   display: block;
   display: flex;
-  width: 10rem;
-  height: 3rem;
+  width: 8rem;
+  height: 2.5rem;
   background-color: var(--primary-color);
   color: white;
   float: right;
@@ -229,12 +225,19 @@ form {
   border-radius: 1rem;
   align-items: center;
   justify-content: center;
-  margin-top: 1rem;
   margin-bottom: 0.6rem;
   margin-right: 2rem;
 }
 
 @media only screen and (min-width: 769px) {
+
+  body{
+    height: 120vh;
+  }
+
+  .new-post-container{
+    height: 80vh;
+  }
   .blog {
     width: 70%;
     margin-top: 2rem;
@@ -258,5 +261,22 @@ form {
 
   .new-post-container {
     width: 50rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .LG-SC-create-new-postBTN {
+    width: 7rem;
+    height: 2rem;
+  }
+
+  body{
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 300px){
+  body{
+    height: 120vh;
   }
 }
