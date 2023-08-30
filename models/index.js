@@ -1,21 +1,25 @@
 const { Sequelize, DataTypes } = require("sequelize");
+require("dotenv").config();
+const sequelize = require("../config/connections");
 
-// Create a Sequelize instance and connect to the database
-const sequelize = new Sequelize(
-  "your_database_name",
-  "your_username",
-  "your_password",
-  {
-    host: "localhost",
-    dialect: "mysql",
-  }
-);
-
-// Define the User model
+// Define User model
 const User = sequelize.define("User", {
+  id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+  },
   username: {
     type: DataTypes.STRING(50),
     allowNull: false,
+  },
+  email: {
+    type: DataTypes.STRING(100),
+    allowNull: false,
+    unique: true, // Ensure emails are unique
+    validate: {
+      isEmail: true, // Validate that the input is an email
+    }
   },
   password: {
     type: DataTypes.STRING(100),
@@ -23,8 +27,13 @@ const User = sequelize.define("User", {
   },
 });
 
-// Define the BlogPost model
+// Define BlogPost model
 const BlogPost = sequelize.define("BlogPost", {
+  id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+  },
   title: {
     type: DataTypes.STRING(100),
     allowNull: false,
@@ -35,23 +44,28 @@ const BlogPost = sequelize.define("BlogPost", {
   },
   created_at: {
     type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW,
+    defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
   },
 });
 
-// Define the Comment model
+// Define Comment model
 const Comment = sequelize.define("Comment", {
+  id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+  },
   content: {
     type: DataTypes.TEXT,
     allowNull: false,
   },
   created_at: {
     type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW,
+    defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
   },
 });
 
-// Establish associations
+// Establishing associations
 User.hasMany(BlogPost, { foreignKey: "creator_id" });
 BlogPost.belongsTo(User, { foreignKey: "creator_id" });
 
@@ -61,14 +75,5 @@ Comment.belongsTo(User, { foreignKey: "creator_id" });
 BlogPost.hasMany(Comment, { foreignKey: "post_id" });
 Comment.belongsTo(BlogPost, { foreignKey: "post_id" });
 
-// Sync the models with the database
-sequelize
-  .sync({ force: true }) // Use `force: true` only during development to recreate tables
-  .then(() => {
-    console.log("Database tables created");
-  })
-  .catch((err) => {
-    console.error("Error syncing models:", err);
-  });
 
 module.exports = { User, BlogPost, Comment };

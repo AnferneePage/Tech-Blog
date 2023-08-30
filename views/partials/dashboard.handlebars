@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Blog</title>
+    <title>Your Dashboard</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,11 +13,11 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
-<body>
+<body >
     <header>
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <a class="navbar-item"">
+                <a class="navbar-item">
                     <h1 class=" header">The Tech Blog</h1>
                 </a>
 
@@ -42,24 +42,35 @@
 
                 </div>
 
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        <div class="buttons">
-                            <a id="sign-upBTN" class="button is-primary">
-                                <strong>Sign up</strong>
-                            </a>
-                            <a class="button is-light">
-                                Log in
-                            </a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </nav>
     </header>
 
 
-    
+    <form action="">
+        <div  class="new-post-container">
+            <div class="np-header-container">
+                <h1 class="np-header">Create Post</h1>
+            </div>
+            <div class="np-info-container">
+                <h2 style="font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;">Title</h2>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Title">
+                </div>
+                <h4 style="font-size: 2rem; font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">Content</h4>
+                <div class="field">
+                    <div class="control">
+                        <textarea style="height: 40%;" class="textarea is-medium" placeholder="Enter your message..."></textarea>
+                    </div>
+                </div>
+                <div class="LG-SC-create-new-postBTN">
+                    <h3>Post</h3>
+                </div>
+
+            </div>
+        </div>
+    </form>
+
 
     <script src="assets/js/script.js"></script>
 </body>

@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #588970;
-  --dense-pri-color: #5889706d;
+  --primary-color: #1295f9;
+  --dense-pri-color: #dddddd22;
 }
 
 html {
@@ -75,14 +75,10 @@ h6 {
 body {
   font-size: 16px;
   line-height: 1.5;
-  height: 100vh;
-}
-
-/* Apply a reasonable margin to the body */
-body {
+  height: fit-content;
   margin: 0;
   height: fit-content;
-  background-color: #dddddd37;
+  background-color: #dddddd22;
 }
 
 .header {
@@ -110,13 +106,12 @@ body {
 .header-container {
   padding: 0.5rem;
   width: 100%;
-  background-color: var(--dense-pri-color);
 }
 
 .blog-title {
   font-weight: 900;
   font-size: 1rem;
-  color: white;
+  color: black;
 }
 
 .blog-info-container {
@@ -154,7 +149,7 @@ form {
   margin-left: auto;
   margin: auto;
   width: 80%;
-  height: 45vh;
+  height: auto;
   background-color: white;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
 }
@@ -168,7 +163,7 @@ form {
 }
 
 #auth-submit-button {
-  margin-top: 3rem;
+  margin-top: -0.3rem;
   float: right;
   background-color: var(--primary-color);
   color: white;
@@ -232,14 +227,14 @@ form {
 @media only screen and (min-width: 769px) {
 
   body{
-    height: 120vh;
+    height:fit-content;
   }
 
   .new-post-container{
     height: 80vh;
   }
   .blog {
-    width: 70%;
+    width: 50%;
     margin-top: 2rem;
     border-radius: 1rem;
   }
@@ -271,7 +266,7 @@ form {
   }
 
   body{
-    height: 100vh;
+    height: fit-content;
   }
 }
 
