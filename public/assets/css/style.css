@@ -1,6 +1,6 @@
 :root {
   --primary-color: #1295f9;
-  --dense-pri-color: #dddddd22;
+  --dense-pri-color: #dddddd7d;
 }
 
 html {
@@ -78,7 +78,7 @@ body {
   height: fit-content;
   margin: 0;
   height: fit-content;
-  background-color: #dddddd22;
+  background-color: var(--dense-pri-color);
 }
 
 .header {
@@ -181,7 +181,7 @@ form {
 }
 
 .new-post-container {
-  margin-top: 4rem;
+  margin-top: 2rem;
   display: block;
   width: 90%;
   height: 70vh;
@@ -198,7 +198,7 @@ form {
   padding: 0.5rem;
   font-weight: 900;
   font-size: 1.5rem;
-  color: white;
+  color: black;
 }
 
 .np-info-container {
@@ -222,6 +222,7 @@ form {
   justify-content: center;
   margin-bottom: 0.6rem;
   margin-right: 2rem;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 769px) {
@@ -231,8 +232,10 @@ form {
   }
 
   .new-post-container{
-    height: 80vh;
+    height: 70vh;
+    font-size: 2rem;
   }
+
   .blog {
     width: 50%;
     margin-top: 2rem;
@@ -263,15 +266,28 @@ form {
   .LG-SC-create-new-postBTN {
     width: 7rem;
     height: 2rem;
+    cursor: pointer;
+  }
+
+  .new-post-container{
+    height: 80vh;
+    font-size: 2rem;
   }
 
   body{
-    height: fit-content;
+    height: fit-content ;
+  }
+  #auth-submit-button{
+    margin-top: 0.5rem;
   }
 }
 
 @media only screen and (max-width: 300px){
   body{
     height: 120vh;
+  }
+
+  #auth-submit-button{
+    margin-top: 0.5rem;
   }
 }

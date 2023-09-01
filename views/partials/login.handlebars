@@ -49,12 +49,12 @@
         </nav>
     </header>
 
-    <form>
+    <form id="login-form" action='/login' method="post">
         <div class="auth-container">
             <h1 class="auth-header">Login</h1>
             <div class="field">
                 <p class="control has-icons-left has-icons-right">
-                    <input class="input" type="email" placeholder="Email">
+                    <input class="input" name="email" type="email" placeholder="Email">
                     <span class="icon is-small is-left">
                         <i class="fas fa-envelope"></i>
                     </span>
@@ -65,19 +65,21 @@
             </div>
             <div class="field">
                 <p class="control has-icons-left">
-                    <input class="input" type="password" placeholder="Password">
+                    <input class="input" name='password' type="password" placeholder="Password">
                     <span class="icon is-small is-left">
                         <i class="fas fa-lock"></i>
                     </span>
                 </p>
             </div>
-            <button id="auth-submit-button" class="button is-rounded">Login</button>
+            <span>Don't have an account?<a href='/signup' >&nbsp;Sign Up</a></span>
+            <button type="submit"  id="auth-submit-button"  class="button is-rounded">Login</button>
         </div>
     </form>
 
 
 
-    <script src="assets/js/script.js"></script>
+    <script src="../../public/assets/js/login.js"></script>
+    <script src="../../public/assets/js/script.js"></script>
 </body>
 
 
