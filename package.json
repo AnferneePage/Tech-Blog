@@ -5,19 +5,19 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run seed && node app.js",
+    "start": "node app.js",
     "seed": "node seed.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AnferneePage/Tech-Blog.git"
+    "url": "git+https://github.com/latrellPage/Tech-Blog.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AnferneePage/Tech-Blog/issues"
+    "url": "https://github.com/latrellPage/Tech-Blog/issues"
   },
-  "homepage": "https://github.com/AnferneePage/Tech-Blog#readme",
+  "homepage": "https://github.com/latrellPage/Tech-Blog#readme",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "connect-session-sequelize": "^7.1.7",
@@ -29,5 +29,4 @@
     "path": "^0.12.7",
     "sequelize": "^6.32.1"
   }
-  
 }
