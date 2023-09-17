@@ -13,7 +13,6 @@ Date and time when it was posted
 Create Blog Posts: To create a new blog post, users must first create an account. Once logged in, they can submit new tech blog posts.
 
 ## Future Development ##
-Here are some ideas for future development and improvements to the Tech Blog:
 
 User Authentication: Implement user authentication to allow registered users to log in and manage their blog posts.
 
